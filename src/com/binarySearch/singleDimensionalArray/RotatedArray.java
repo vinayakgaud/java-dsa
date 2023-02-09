@@ -10,12 +10,23 @@ public class RotatedArray {
         rotatedArray(arr,numberOfRotations);
         System.out.println("After Rotation: "+Arrays.toString(arr));
     }
-    static int[] rotatedArray(int[] arr,int k){
-        for (int i = 0; i < k; i++) {
-            int temp = arr[arr.length-1];
-            arr[arr.length-1-i] = arr[arr.length-2 - i];
-            arr[0] = temp;
+    static void reverse(int[] a,int i,int j){
+        while(i < j){
+            int t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+            i++;
+            j--;
         }
-        return arr;
+    }
+    static void rotatedArray(int[] arr,int k){
+        k = k%arr.length;
+        if(k<0) k = k+ arr.length;
+        //1stPart
+        reverse(arr,0,arr.length-k-1);
+        //2ndPart
+        reverse(arr,arr.length-k,arr.length-1);
+        //all
+        reverse(arr,0,arr.length-1);
     }
 }

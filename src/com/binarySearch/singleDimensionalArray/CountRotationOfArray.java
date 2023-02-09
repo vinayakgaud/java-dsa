@@ -3,7 +3,7 @@ package com.binarySearch.singleDimensionalArray;
 public class CountRotationOfArray {
     //Rotated sorted array
     public static void main(String[] args) {
-        int[] arr = {2,3,4,5};
+        int[] arr = {10,20,30,5,10,50};
 //        System.out.println(countOfRotation(arr));
         System.out.println(countOfRotationBS(arr));
     }

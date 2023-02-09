@@ -2,7 +2,7 @@ package com.recursion;
 
 public class RecursionBasic {
     public static void main(String[] args) {
-        print(1);
+        print(10);
     }
     static void print(int n){
 
@@ -13,4 +13,5 @@ public class RecursionBasic {
         System.out.println(n);
         print(n+1); //tail recursion
     }
+
 }

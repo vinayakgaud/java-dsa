@@ -19,13 +19,24 @@ public class BinarySearchInRowColMatrix {
         int target = 11;
         System.out.println(Arrays.toString(binarySearch(arr,target)));
     }
-    static int[] binarySearch(int[][] arr, int target){
-        int start = 0;
-        int end = arr[0].length-1;
-        while (start < arr.length && end >= 0){
-            if(arr[start][end] == target) return new int[]{start , end};
-            if(arr[start][end] < target) start++;
-            else end--;
+//    static int[] binarySearch(int[][] arr, int target){
+//        int start = 0;
+//        int end = arr[0].length-1;
+//        while (start < arr.length && end >= 0){
+//            if(arr[start][end] == target) return new int[]{start , end};
+//            if(arr[start][end] < target) start++;
+//            else end--;
+//        }
+//        return new int[]{-1,-1};
+//    }
+
+    static int[] binarySearch(int[][] arr, int t){
+        int s = 0;
+        int e = arr[0].length-1;
+        while(s < arr.length && e>=0){
+            if(arr[s][e] == t) return new int[]{s,e};
+            if(arr[s][e] > t) e--;
+            else s++;
         }
         return new int[]{-1,-1};
     }

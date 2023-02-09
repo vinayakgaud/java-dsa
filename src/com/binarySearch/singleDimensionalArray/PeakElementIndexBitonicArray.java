@@ -3,7 +3,7 @@ package com.binarySearch.singleDimensionalArray;
 //https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 public class PeakElementIndexBitonicArray {
     public static void main(String[] args) {
-        int[] arr = {0,1,2,3,2,1,0};
+        int[] arr = {1,15,25,45,42,21,17,12,11};
         System.out.println(binarySearchResult(arr));
     }
     static int binarySearchResult(int[] arr){
@@ -17,7 +17,7 @@ public class PeakElementIndexBitonicArray {
                 start = mid + 1;
             }
         }
-        return end;
+        return arr[end];
     }
 }
 
